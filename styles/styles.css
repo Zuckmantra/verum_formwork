@@ -52,9 +52,10 @@ header{
     }
 
     & p{
-        font-size: 2em;
-        max-width: 900px;
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        max-width: min(900px, 80vw);
         margin-top: 50px;
+        line-height: 1.4;
     }
 
 }
@@ -114,11 +115,11 @@ header{
 
     & p{
         font-family: var(--secondary-font-family);
-        font-size: 1.3em;
+        font-size: clamp(1.1rem, 15vw, 1.5rem);
         color: var(--text-color);
         line-height: 1.6;
         grid-area: text;
-        max-width: 550px;
+        max-width: min(550px, 90vw);
     }
 
     
@@ -339,10 +340,10 @@ section:nth-child(5) .our_product{
 
     & p{
         font-family: var(--secondary-font-family);
-        font-size: 1.3em;
+        font-size: clamp(1.5rem, 15vw, 1.8rem);
         color: var(--text-color);
         line-height: 1.6;
-        max-width: 800px;
+        max-width: min(800px, 90vw);
         text-align: start;
     }
 }
@@ -355,9 +356,9 @@ section:nth-child(5) .phrases_description{
 
     & p{
         font-family: var(--font-family);
-        font-size: 1.1em;
+        font-size: clamp(1rem, 6vw, 1.5rem);
         color: var(--text-color);
-        max-width: 200px;
+        max-width: min(200px, 40vw);
         text-align: center;
 
         & strong{
@@ -484,7 +485,7 @@ footer{
         display: flex;
         gap: 20px;
         font-family: var(--secondary-font-family);
-        font-size: 1.2em;
+        font-size: 1.6em;
         flex-direction: column;
         max-width: 250px;
     }
@@ -495,56 +496,216 @@ footer{
     }
 }
 
-@media screen and (max-width: 1750px) {
-        section:nth-child(3){
-        padding: 0;;
-        & a:first-of-type{
-            scale: 0.9;
-        }
 
-        & a:last-of-type{
-            scale: 0.9;
-        }
+
+@media (600px <= width <= 1500px){
+    /* Cambios para pantallas entre 700px y 1500px -HEADER-*/
+    header{
+        height: 100vh;
+        padding: 3em;
     }
-}
 
-@media screen and (max-width: 1600px) {
+    header h1{
+        font-size: 4em;
+        margin: 5px 0;
+    }
+
+    header img{
+        width: 30vw;
+    }
+
+    header button{
+        margin: 0 10px;
+    }
+
+    header p{
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        line-height: 1.5em;
+        margin-top: 20px;
+    }
+
+    header .logo-verum-svg{
+        width: 600px;
+        position: absolute;
+        right: 0px;
+        top: 50vh;
+    }
+
+    .first-section-index{
+        padding: 3em;
+        grid-template-areas:   
+        "title image"
+        "text image" ;
+    }
+
+    .first-section-index h2{
+        font-size: 3.5em;
+        text-align: start;
+        align-self: end;
+    }
+
+    .first-section-index p{
+        font-size: clamp(0.9rem, 2vw, 1rem);
+        text-align: start;
+        max-width: min(30vw, 400px);
+        align-self: flex-start;
+        line-height: 1.6;
+    }
 
     section:nth-child(3){
-        padding: 3em;
-        & a:first-of-type{
-            scale: 0.8;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+
+    }
+
+    section:nth-child(3) a:first-of-type{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & img{
+            scale: 0.7;
+            transform: translate(0%, 0%);
         }
 
-        & a:last-of-type{
-            scale: 0.8;
+        & h2{
+            transform: translate(0, -80px);
+            font-size: 1.5em;
         }
     }
+
+    section:nth-child(3) a:last-of-type{
+        display: flex;
+        flex-direction: column-reverse;
+        transform: translate(0, 0);
+        align-items: center;
+        
+        & img{
+            scale: 0.7;
+            transform: translate(0, 0);
+        
+        }
+
+        & h2{
+            transform: translate(0, 0);
+            font-size: 1.5em;
+        }
+    }
+
+    section:nth-child(3) a:hover{
+            scale: 0.6 !important;
+    }
+
+    section:nth-child(4) {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        overflow: hidden;
+        height: 150vh;
+        padding: 1.2em;
+    }
+
+    section:nth-child(4) .future_solutions h2{
+        font-size: 2.5em;
+        text-align: end;
+        
+    }
+
+    section:nth-child(4) .future_solutions h4{
+        font-size: 1em;
+        text-align: end;
+    }
+
+    section:nth-child(4) .future_solutions picture{
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 90vw;
+        height: auto;
+
+        & img:first-of-type{
+            width: auto;
+            height: 40vh;
+            transform: translate(0%, 0%);
+        }
+
+        & img:last-of-type{
+            width: auto;
+            height: 40vh;
+            transform: translate(0, -9vh);
+        }
+    }
+    section:nth-child(4) .future_solutions picture::before{
+        width: 55vw;
+        height: 55vh;
+        transform: translate(-5vw, -5vh);
+    }
+    section:nth-child(4) .future_solutions h2::before{
+        width: 9em;
+        height: 2em;
+        transform: translate(-15px, -18px);
+        top: 0
+    }
+
+    section:nth-child(5){
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1em;
+    }
     
-    section:nth-child(4){
-        & .future_solutions{
-           justify-content: center;
-        }
+    section:nth-child(5) .our_product {
+        flex: 0 0 40%;
+        max-width: 40%;
+    }
 
-        & .future_solutions picture{
-            & img:first-of-type{
-                transform: translate(15%, 15%);
-                scale: 0.8  ;
-            }
-            & img:last-of-type{
-                transform: translate(-25%, -15%);
-                scale: 0.8;
-            }
+        section:nth-child(5) .our_product h2 {
+        font-size: 2em;
+        align-items: center;
+        justify-content: center;
+    }
+    section:nth-child(5) .our_product p {
+        font-size: clamp(1rem, 1.5vw, 1.1rem);
+        text-align: start;
+        max-width: min(600px, 90%);
+        line-height: 1.5;
+    }
+    
+    section:nth-child(5) .phrases_description {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+    
+    section:nth-child(5) img {
+        flex: 0 0 40%;
+        max-width: 40%;
+        object-position: left;
+        align-self: flex-end;
+    }
+    
+    section:nth-child(6){
+        height: auto;
+        margin-bottom: 20px;
+        & figure{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
+    }
 
-        & picture::before{
-            transform: translate(-5em, -5em);
-        }
+    footer{
+        height: auto;
+        flex-wrap: wrap;
     }
 }
 
 
-@media screen and (max-width: 425px){
+@media screen and (max-width: 430px){
     /*Cambios para dispositivos móviles -HEADER-*/
     header{
         height: auto;
@@ -565,9 +726,9 @@ footer{
     }
 
     header p{
-        font-size: 1.2em;
-        max-width: 90vw;
-        line-height: 2em;
+        font-size: clamp(1.3rem, 3vw, 1.7rem);
+        max-width: min(90vw, 500px);
+        line-height: 1.4;
     }
 
     header .logo-verum-svg{
@@ -596,9 +757,10 @@ footer{
     }
 
     .first-section-index p{
-        font-size: 1em;
+        font-size: clamp(1rem, 3.5vw, 1.5rem);
         text-align: start;
-        max-width: 90vw;
+        max-width: min(90vw, 400px);
+        line-height: 1.5;
     }
 
     .first-section-index img{
@@ -608,7 +770,7 @@ footer{
 
     /* Cambios para dispositivos móviles -2° SECTION-*/
     section:nth-child(3){
-        padding: 0;
+        padding: 3em 5px;
         display: flex;
         flex-direction: column;
     }
@@ -657,6 +819,7 @@ footer{
         "titulo titulo"
         "texto texto"
         "imagen imagen";
+        
     }
 
     section:nth-child(4) .future_solutions h2{
@@ -685,7 +848,7 @@ footer{
         & img:last-of-type{
             width: 100%;
             height: auto;
-            transform: translate(0%, -9vh);
+            transform: translate(0%, -4vh);
         }
     }
     section:nth-child(4) .future_solutions picture::before{
@@ -722,9 +885,10 @@ footer{
     }
 
     section:nth-child(5) .our_product p{
-        font-size: 1em;
+        font-size: clamp(1rem, 3vw, 1.5rem);
         text-align: start;
-        max-width: 95vw;
+        max-width: min(95vw, 400px);
+        line-height: 1.4;
     }
 
     section:nth-child(5) .phrases_description{
