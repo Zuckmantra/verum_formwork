@@ -1,17 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
 *, :root, ::after, ::before {
     --primary-color: #000822;
     --secondary-color: #FFFFFF;
     --thirth-color: #f72585;
     --text-color: #0b0f1d;
-    --font-family: 'League Spartan', 'Monserrat';
+    --font-family: 'League Spartan', 'Montserrat';
     --secondary-font-family: 'Montserrat', sans-serif;
     --font-size: 16px;
     --border-radius: 30px;
     box-sizing: border-box;
     margin: 0;
+}
+
+body > * {
+    font-family: var(--font-family);
 }
 
 /* Evitar selección de imágenes y elementos */
@@ -31,15 +32,13 @@ header{
     background-color: var(--primary-color);
     padding-left: 80px;
     padding-top: 80px;
-
-    color: var(--secondary-color);
-    font-family: var(--secondary-font-family);
     
+    color: var(--secondary-color);
+    font-family: var(--font-family);
     overflow: hidden;
     position: relative;
     z-index: 0;
     & h1{
-        font-family: var(--font-family);
         font-size: 7em;
         max-width: 1000px;
         margin-top: 50px;
@@ -488,6 +487,7 @@ footer{
         font-size: 1.6em;
         flex-direction: column;
         max-width: 250px;
+        align-items: start
     }
 
     & div a{
@@ -498,7 +498,7 @@ footer{
 
 
 
-@media (600px <= width <= 1500px){
+@media (600px <= width <= 1700px){
     /* Cambios para pantallas entre 700px y 1500px -HEADER-*/
     header{
         height: 100vh;
@@ -554,23 +554,25 @@ footer{
 
     section:nth-child(3){
         display: flex;
-        flex-direction: row-reverse;
-        justify-content: center;
-
+        flex-direction: column;
+        padding: 2em;
     }
 
     section:nth-child(3) a:first-of-type{
         display: flex;
         flex-direction: column;
         align-items: center;
+        
 
         & img{
-            scale: 0.7;
+            scale: 1;
             transform: translate(0%, 0%);
+            max-width: 100%;
+            height: auto;
         }
 
         & h2{
-            transform: translate(0, -80px);
+            transform: translate(0, 0px);
             font-size: 1.5em;
         }
     }
@@ -582,9 +584,10 @@ footer{
         align-items: center;
         
         & img{
-            scale: 0.7;
+            scale: 1;
             transform: translate(0, 0);
-        
+            width: auto;
+            height: 50vh;
         }
 
         & h2{
@@ -613,7 +616,7 @@ footer{
     }
 
     section:nth-child(4) .future_solutions h4{
-        font-size: 1em;
+        font-size: 1.4em;
         text-align: end;
     }
 
@@ -699,13 +702,13 @@ footer{
     }
 
     footer{
-        height: auto;
+        height: 100%;
         flex-wrap: wrap;
     }
 }
 
 
-@media screen and (max-width: 430px){
+@media screen and (max-width: 599px){
     /*Cambios para dispositivos móviles -HEADER-*/
     header{
         height: auto;
@@ -786,7 +789,7 @@ footer{
         }
 
         & h2{
-            transform: translate(0, 0);
+            transform: translate(0, -2rem);
             font-size: 1.5em;
         }
     }
@@ -798,7 +801,7 @@ footer{
         align-items: center;
         
         & img{
-            scale: 0.65;
+            scale: 0.6;
             transform: translate(0, 0);
         
         }
@@ -823,13 +826,14 @@ footer{
     }
 
     section:nth-child(4) .future_solutions h2{
-        font-size: 2.5em;
+        font-size: 2em;
         text-align: end;
     }
 
     section:nth-child(4) .future_solutions h4{
         font-size: 1em;
         text-align: end;
+        max-width: 70vw;
     }
 
     section:nth-child(4) .future_solutions picture{
@@ -857,7 +861,7 @@ footer{
         transform: translate(-5vw, -15vh);
     }
     section:nth-child(4) .future_solutions h2::before{
-        width: 9em;
+        width: 9.5em;
         height: 2em;
         transform: translate(-15px, -18px);
         top: 0
@@ -865,7 +869,7 @@ footer{
 
     /* Cambios para dispositivos móviles -4° SECTION-*/
     section:nth-child(5){
-        height: 100vh;
+        height: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -880,7 +884,7 @@ footer{
 
     section:nth-child(5) .our_product h2{
         font-size: 2.5em;
-        text-align: start;
+        text-align: center;
         padding-bottom: 20px;
     }
 
@@ -970,11 +974,11 @@ footer{
 
     /* Cambios para dispositivos móviles -FOOTER-*/
     footer{
-        height: 60vh;
+        height: 80vh;
         flex-direction: column;
-        padding: 10px 20px;
+        padding: 10px 5px;
         text-align: center;
-       align-items: center;
+        align-items: center;
 
     }
 
@@ -991,6 +995,7 @@ footer{
 
     footer div{
         gap: 10px;
+        align-items: center;        
     }
 
     footer div:first-of-type{
