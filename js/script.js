@@ -1,7 +1,7 @@
 let carruselImages = document.querySelectorAll('#carrusel_images img');
-let mainImage = document.querySelector('.visor img');
-let leftArrow = document.querySelector('#left-arrow');
-let rightArrow = document.querySelector('#right-arrow');
+let mainImage = document.querySelector('.visor_image');
+let leftArrow = document.querySelector('.left-arrow');
+let rightArrow = document.querySelector('.right-arrow');
 let currentIndex = 0;
 
 rightArrow.addEventListener('click', () => {

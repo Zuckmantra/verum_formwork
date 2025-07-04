@@ -4,12 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Verum FormWork es una empresa dedicada a la innovación y desarrollo de soluciones avanzadas en el ámbito de la ingeniería y la construcción. Con sistemas de construcción modulares y sostenibles, Verum FormWork se posiciona como líder en el sector, ofreciendo productos de alta calidad y eficiencia.">
-    <meta name="keywords" content="Verum FormWork, ingeniería, construcción, soluciones avanzadas, sistemas modulares, sostenibilidad, innovación, ahorrar costos, eficiencia, calidad">
+    <meta name="description" content="Verum Formwork es una empresa dedicada a la innovación y desarrollo de soluciones avanzadas en el ámbito de la ingeniería y la construcción. Con sistemas de construcción modulares y sostenibles, Verum FormWork se posiciona como líder en el sector, ofreciendo productos de alta calidad y eficiencia.">
+    <meta name="keywords" content="Verum, Verum Formwork, ingeniería, construcción, soluciones avanzadas, sistemas modulares, sostenibilidad, innovación, ahorrar costos, eficiencia, calidad">
     <meta name="author" content="Harold Gomez">
     <link rel="icon" href="icons/verum.ico" type="image/x-icon">
     <title>Verum FormWork</title>
     <link rel="stylesheet" href="styles/styles.css">
+
+      <!-- Miniatura para redes sociales -->
+  <meta property="og:title" content="Verum Formwork" />
+  <meta property="og:description" content="Verum Formwork es una empresa dedicada a la innovación y desarrollo de soluciones avanzadas en el ámbito de la ingeniería y la construcción. Con sistemas de construcción modulares y sostenibles, Verum FormWork se posiciona como líder en el sector, ofreciendo productos de alta calidad y eficiencia." />
+  <meta property="og:image" content="https://zuckmantra.github.io/images/logo_verum_header.webp" />
+  <meta property="og:url" content="https://verum.com.co" />
+  <meta name="twitter:card" content="summary_large_image" />
+
     <style>
         @font-face {
             font-family: 'League Spartan';
@@ -57,9 +65,9 @@
         <img src="images/logo_verum_header.webp" alt="Verum FormWork Logo" width="700" class="logo">
         <h1>Innovando el futuro de la construcción</h1>
         <a href="pages_aux/construccion.html"><button  class="button-header design-button">Tour 3D</button></a>
-        <a href="pages_aux/asesoria.html"><button  class="button-header design-button">Asesoria</button></a>
-        <a href="pages_aux/construccion.html"><button  class="button-header design-button">Ver Catálago</button></a>
-        <p>En Verum FormWork, no solo levantamos estructuras: levantamos sueños, esfuerzo y la esperanza de un mundo mejor construido.</p>
+        <a href="https://wa.me/573159035800"><button  class="button-header design-button">Asesoria</button></a>
+        <a href="downloads/Brochure_Verum_Formwork.pdf"><button  class="button-header design-button">Ver Catálago</button></a>
+        <p>En Verum Formwork, no solo levantamos estructuras: levantamos sueños, esfuerzo y la esperanza de un mundo mejor construido.</p>
         <img src="images/Sitio Web Verum.svg" alt="Logo Verum svg" class="logo-verum-svg">
     </header>
 
@@ -71,14 +79,18 @@
     </section>
 
     <section class="height-section">
-        <a href="">
-            <img src="images/index/caseton-black.webp" alt="Caseton negro" class="section-caseton-black" width="500" lazyload="lazy">
-            <h2>Sistema para losa nervada</h2>
-        </a>
-        <a href="">
-            <img src="images/index/losa-maciza.webp" alt="Caseton losa maciza" class="losa-macisa-white" width="700" lazyload="lazy">
-            <h2>Sistema para losa maciza</h2>
-        </a>
+        <div class="card-link">
+            <a href="">
+                <img src="images/index/caseton-black.webp" alt="Caseton negro" class="section-caseton-black" width="500" loading="lazy">
+                <h2>Sistema para losa nervada</h2>
+            </a>
+        </div>
+        <div class="card-link">
+            <a href="">
+                <img src="images/index/losa-maciza.webp" alt="Caseton losa maciza" class="losa-macisa-white" width="700" loading="lazy">
+                <h2>Sistema para losa maciza</h2>
+            </a>
+        </div>
     </section>
 
     <section class="height-section">
@@ -90,7 +102,7 @@
                 <img src="images/index/losa_nervada_recta.webp" alt="Losa nervada recta" class="section_third_nervada" lazyload="lazy">
             </picture>
         </div>
-        <button class="button_section_third design-button">VER TODO</button>
+        <button class="button_section_third design-button" ><a href="downloads/Brochure_Verum_Formwork.pdf">VER TODO</a></button>
     </section>
 
     <section class="height-section">
@@ -112,16 +124,16 @@
     <section class="height-section carrusel">
         <h2>Nuestra Galeria</h2>
         <div class="visor">
-            <svg id="left-arrow"> <use xlink:href="images/index/icons/flecha-izquierda.svg"></use></svg>
-            <img id="main_image" src="images/index/carrusel/caseton_estrcuturado.webp" alt="Imagen principal del carrusel" lazyload="lazy">
-            <svg id="right-arrow"> <use xlink:href="images/index/icons/flecha-derecha.svg"></use></svg>
+            <img src="images/index/icons/flecha-izquierda.svg" alt="Flecha flecha-derecha" class="left-arrow arrow-icon">
+            <img id="main_image" src="images/index/carrusel/encofrado-azul.avif" alt="Imagen principal del carrusel" lazyload="lazy" class="visor_image">
+            <img src="images/index/icons/flecha-derecha.svg" alt="Flecha izquierda" class="right-arrow arrow-icon">
         </div>
-        <figure id="carrusel_images">
-            <img src="images/index/carrusel/caseton_estrcuturado.webp"  alt="" lazyload="lazy">
-            <img src="images/index/carrusel/estrcutura_sol.webp" lazyload="lazy">
-            <img src="images/index/carrusel/estructura_completa.webp" lazyload="lazy" >
-            <img src="images/index/carrusel/estructura_losa.webp" lazyload="lazy">
-            <img src="images/index/carrusel/losa_paisaje.webp" lazyload="lazy">
+        <figure id="carrusel_images"> 
+            <img src="images/index/carrusel/encofrado-azul.avif"  alt="" lazyload="lazy">
+            <img src="images/index/carrusel/losa-debajo.avif" lazyload="lazy">
+            <img src="images/index/carrusel/acabados-losa.avif" lazyload="lazy" >
+            <img src="images/index/carrusel/losa-lateral.webp" lazyload="lazy">
+            <img src="images/index/carrusel/ingenieria-encofrado.avif" alt="" lazyload="lazy">
         </figure>
     </section>
 
