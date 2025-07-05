@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/pages_aux/asesoria.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Asesoria Verum es una empresa dedicada a la innovación y desarrollo de soluciones avanzadas en el ámbito de la ingeniería y la construcción. Con sistemas de construcción modulares y sostenibles, Verum FormWork se posiciona como líder en el sector, ofreciendo productos de alta calidad y eficiencia.">
+    <meta name="keywords" content="Verum FormWork, ingeniería, construcción, soluciones avanzadas, sistemas modulares, sostenibilidad, innovación, ahorrar costos, eficiencia, calidad">
+    <meta name="author" content="Harold Gomez">
+    <link rel="icon" href="../icons/verum.ico" type="image/x-icon">
+    <title>Asesoria Verum</title>
+    <style>
+        @font-face {
+            font-family: 'League Spartan';
+            src: url(../fonts/league-spartan/league-spartan-v14-latin-regular.woff2) format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'League Spartan';
+            src: url('../fonts/league-spartan/league-spartan-v14-latin-700.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'League Spartan';
+            src: url('../fonts/league-spartan/league-spartan-v14-latin-900.woff2') format('woff2');
+            font-weight: 900;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Montserrat';
+            src: url('../fonts/montserrat/montserrat-v30-latin-regular.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Montserrat';
+            src: url('../fonts/montserrat/montserrat-v30-latin-700.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <img src="../images/logo_verum_header.webp" alt="Verum FormWork Logo" width="700" class="logo">
+        <h1>Innovando el futuro de la construcción</h1>
+        <a href="../index.html"><button  class="button-header design-button">Inicio</button></a>
+        <a href="../pages_aux/construccion.html"><button  class="button-header design-button">Tour 3D</button></a>
+        <a href="../pages_aux/construccion.html"><button  class="button-header design-button">Ver Catálago</button></a>
+        <p>En Verum FormWork, no solo levantamos estructuras: levantamos sueños, esfuerzo y la esperanza de un mundo mejor construido.</p>
+        <img src="../images/Sitio Web Verum.svg" alt="Logo Verum svg" class="logo-verum-svg">
+    </header>
+
+    <main>
+        <form action="#" method="post" class="form-asesoria">
+            <header>
+                <h3>Formulario para contacto</h3>
+                <legend>Complete el formulario para recibir nuestra ayuda o nuestras nuevas innovaciones y noticias.</legend>
+            </header>
+
+                <section>
+                    <h4>Información Personal</h4>
+                    <label for="name">Nombres <span class="required">*</span></label><input type="text" id="name" name="name" required>
+                    <label for="last_name">Apellidos <span class="required">*</span></label><input type="text" id="last_name" name="last_name" required>
+                    <label for="email">Correo electronico <span class="required">*</span></label><input type="email" id="email" name="email" required>
+                    <label for="number">Telefono </label><input type="tel" id="number" name="number" required>
+                    <label for="type_asesoria">Tipo de Contacto <span class="required">*</span></label>
+                    <select id="type_contacto" name="type_contacto" id="type_asesoria" required>
+                        <option value="asesoria_tecnica">Asesoria Técnica</option>
+                        <option value="asesoria_comercial">Asesoria Comercial</option>
+                        <option value="marketing">Marketing</option>
+                    </select>
+                </section>
+
+                <section>
+                    <h4>Información del proyecto</h4>
+                    <label for="business">Nombre de la constructora <span class="required">*</span></label><input type="text">
+                    <label for="work">Nombre de la obra <span class="required">*</span></label><input type="text">
+                    <label for="city">Ciudad <span class="required">*</span></label><input type="text">
+                    <label for="other_city">Especifique la ciudad</label><input type="text">
+                </section>
+
+                <section>
+                    <h4>Comentarios Adicionales</h4>
+                    <label for="comentarios">Comentarios</label>
+                    <textarea id="comentarios" name="comentarios" rows="10" placeholder="Dejanos saber tus inquietudes"></textarea>
+                    
+                    <label for="planos">Planos *</label>
+                    <p>Adjunte los planos de la obra en formato DWG</p>
+                    <div class="file-upload-wrapper">
+                        <input type="file" id="planos" name="planos" accept=".dwg,.pdf" class="file-upload-input">
+                        <label for="planos" class="file-upload-label">
+                            Seleccionar archivo
+                        </label>
+                        <div class="file-name" id="file-name">Ningún archivo seleccionado</div>
+                    </div>
+                </section>
+
+                <input type="submit" value="Enviar" class="button-submit">
+        </form>
+    </main>
+
+    <footer>
+        <h3>Comunicate <strong>con nosotros</strong></h3>
+
+        <div>
+            <strong>OFICINA PRINCIPAL</strong>
+            <p>Chia, Cundinamarca, Colombia</p>
+            <p><a href="+57 3159270898">3159270898</a></p>
+            <br>
+            <a href="mailto:marketing@verum.com.co"><strong>marketing@verum.com.co</strong></a>
+        </div>
+
+        <div>
+            <strong>REDES SOCIALES</strong>
+
+            <p><a href="https://www.facebook.com/profile.php?id=61577836781845">Facebook</a></p>
+            <p><a href="https://www.instagram.com/verumformwork/">Instagram</a></p>
+            <p><a href="https://www.linkedin.com/company/verumformwork/">LinkedIn</a></p>
+        </div>
+
+    </footer>
+    <script src="../js/asesoria.js"></script>
+</body>
+</html>
