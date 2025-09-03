@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const formData = new FormData(formulario);
 
         try {
-            const response = await fetch('http://localhost:3000/asesoria', {
+            const response = await fetch('https://backend-backend.eahtrc.easypanel.host/asesoria', {
                 method: 'POST',
                 body: formData
             });
