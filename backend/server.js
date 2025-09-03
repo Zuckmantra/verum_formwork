@@ -8,7 +8,7 @@ const path = require('path');
 require('dotenv').config();
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // --- CONFIGURACIÓN DE LA BASE DE DATOS ---
 const pool = new Pool({
@@ -33,7 +33,11 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 // --- MIDDLEWARE ---
-app.use(cors());
+const corsOptions = {
+  origin: 'https://verum.com.co',
+  optionsSuccessStatus: 200
+};
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads'))); // Servir archivos estáticos
 
