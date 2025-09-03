@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestionar suscripciones | Verum</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Gestiona tus preferencias de suscripción y da de baja tu correo en Verum. Elige los temas que te interesan y mantente informado.">
+  <meta name="keywords" content="suscripción, baja, preferencias, newsletter, Verum, eventos, novedades, ofertas, blog">
+  <meta name="author" content="Verum">
+  <link rel="canonical" href="https://verum.com/pages_aux/no_suscripcion.html">
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/pages_aux/no_suscripcion.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Gestionar suscripciones</h1>
+    </header>
+
+    <form id="prefsForm" >
+      <section aria-label="Correo electrónico" class="email-section">
+        <label for="userEmail" class="email-label">Correo electrónico:</label>
+        <input type="email" id="userEmail" name="email" required 
+          class="email-input"
+          placeholder="tucorreo@ejemplo.com">
+      </section>
+
+      <section aria-label="Preferencias de suscripción">
+
+        <div class="channel">
+          <label>
+            <input type="checkbox" name="canales[]" value="ofertas" checked>
+            Ofertas y promociones
+          </label>
+        </div>
+
+        <div class="channel">
+          <label>
+            <input type="checkbox" name="canales[]" value="novedades" checked>
+            Novedades del sitio
+          </label>
+        </div>
+
+        <div class="channel">
+          <label>
+            <input type="checkbox" name="canales[]" value="blog" checked>
+            Nuevos artículos del blog
+          </label>
+        </div>
+
+        <div class="channel">
+          <label>
+            <input type="checkbox" name="canales[]" value="eventos" checked>
+            Eventos y webinars
+          </label>
+        </div>
+
+        <div class="channel">
+          <label>
+            <input type="checkbox" name="canales[]" value="ninguna" >
+            Ninguna de las anteriores
+          </label>
+        </div>
+
+        <button type="submit">Guardar preferencias</button>
+        <div class="message" id="response"></div>
+      </form>
+    </section>
+  </main>
+
+  <script src="../js/no_suscripcion.js"></script>
+</body>
+</html>
